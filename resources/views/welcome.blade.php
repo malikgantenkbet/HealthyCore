@@ -16,14 +16,32 @@
             font-family: 'Poppins', sans-serif;
             background-color: #FFF7D4;
         }
+        .bg-utama{
+         background-image: url('/img/background.jpg');
+         background-size: auto;
+         background-position: center;
+         text-align: center;
+         height: 100%;
+         width: 100%;
+         display: table;
+         vertical-align: middle;
+         }
+         h1,p{color: white;}
+         .konten-ditengah {
+         display: table-cell;
+         vertical-align: middle;
+         }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="leading-normal tracking-normal text-white-400 m-6 bg-cover bg-fixed" style="background: url('{{ asset('/img/background.jpg') }}'); background-size: cover; background-position: center;">
+
+
+
+<body class="bg-utama">
 
 <div class="h-full flex flex-col justify-between">
     <!--Nav-->
-    <div class="w-full container mx-auto">
+    <div class="w-full container mx-auto"><br>
         <div class="w-full flex items-center justify-between">
             <a class="flex items-center text-white-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
             href="{{ route('welcome') }}">
@@ -38,17 +56,15 @@
             </div>
         </div>
     </div>
-
+    <br><br><br>
     <!--Main-->
-    <div class="container mx-auto flex flex-wrap md:flex-nowrap items-center">
-        <div class="container ">
-            <div class="row justify-center">
-                <div class="col-lg-7 text-center">
-                    <h1 class="text-white text-4xl animated zoom-in">Welcome to<strong class="text-dark"> Healthy & Core</strong></h1>
-                    <p class="text-white mb-4 animated zoom-in">HealtyCore adalah sebuah solusi perangkat lunak yang digunakan di  rumah sakit untuk mengotomatisasi dan menyederhanakan proses pendaftaran pasien.</p>
-                    <a href="#explore" class="btn btn-light rounded-full py-3 px-5 animated zoom-in border border-yellow-500">Daftar Antrian</a>
-                </div>
-            </div>
+    <div class="konten-ditengah text center">
+        <div class="">
+            <div class="">
+                <h1 class="text-white text-4xl animated zoom-in">Welcome to<strong class="text-dark"> Healthy & Core</strong></h1><br>
+                <p class="text-white mb-4 animated zoom-in"><br>HealtyCore adalah sebuah solusi perangkat lunak yang <br>digunakan di  rumah sakit untuk mengotomatisasi dan menyederhanakan <br>proses pendaftaran pasien.</p><br><br>
+                <a href="#explore" class="btn btn-light rounded-full py-3 px-5 animated zoom-in border border-yellow-500">Daftar Antrian</a>
+            </div>        
         </div>
     </div>
 </div>
