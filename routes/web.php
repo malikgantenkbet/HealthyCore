@@ -1,6 +1,25 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\NewPasswordController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\KucingController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BioController;
+use App\Http\Controllers\MainDashboardController;
+use App\Http\Controllers\ContentController;
+use App\Http\Controllers\DiskusiController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\E_ProfileController;
+use App\Http\Controllers\Setting2Controller;
+use App\Http\Controllers\Admin\artikelAdminController;
+use App\Models\Kucing;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +32,76 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/** START HALAMAN WELCOME, DIMANA USER YANG BELUM MELAKUKAN LOGIN AKAN DIARAHKAN KE HALAMAN INI */
+Route::middleware(['guest'])->group(function(){
+  Route::get('/', function(){
     return view('welcome');
+  })->name('welcome');
 });
+
+
+
+Route::middleware(['auth'])->group(function(){
+
+  Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+  Route::view('/testi','testi');
+  Route::view('/bio','bio');
+  Route::view('/balasDiskusi','balasDiskusi');
+  Route::view('/diskusi','diskusi');
+  Route::view('/setting2','setting2');
+  Route::view('/setting1','setting1');
+});
+
+/*Route::middleware(['guest'])->group(function(){
+//   Route::get('/', [SesiController::class, 'index'])->name('login');
+//   Route::post('/', [SesiController::class, 'login']);
+
+  Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
+  Route::post('/signup', [SignUpController::class, 'signup']);
+  });
+Route::get('/dashboard', function () {
+    return view('dashboard');
+  })->name('dashborad');
+});
+
+/** END HALAMAN WELCOME
+  // Route::get('/signup', [SignUpController::class, 'showRegistrationForm'])->name('signup');
+  // Route::post('/signup', [SignUpController::class, 'signup']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+  })->name('dashborad');
+});*/
+
+
+Route::middleware(['auth'])->group(function(){
+  Route::get('/adopted', [CatController::class, 'index'])->name('profile');
+  Route::get('bio/{id}', [BioController::class, 'show'])->name('bio.show');
+  Route::view('/testi','testi');
+  Route::view('/bio','bio');
+  Route::view('/balasDiskusi','balasDiskusi');
+  Route::view('/diskusi','diskusi');
+  Route::view('/setting2','setting2');
+  Route::view('/setting1','setting1');
+  Route::middleware(['guest'])->group(function(){
+
+  });
+
+  
+  Route::middleware(['auth'])->group(function(){
+    Route::get('/adopted', [CatController::class, 'index'])->name('profile');
+  });
+});
+
+
+// Route menampilkan form profil pengguna
+
+require __DIR__.'/auth.php';
+
+require __DIR__.'/auth.php';
+require __DIR__.'/webkel5.php';
+require __DIR__.'/webkel3.php';
+require __DIR__.'/webkel2.php';
+require __DIR__.'/webkel1.php';
+require __DIR__.'/webkel4.php';
+
