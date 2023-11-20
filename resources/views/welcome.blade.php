@@ -44,7 +44,7 @@
         <div class="container ">
             <div class="row justify-center">
                 <div class="col-lg-7 text-center">
-                    <h1 class="text-white text-4xl animated zoom-in">Welcome <strong class="text-dark">Admin</strong></h1>
+                    <h1 class="text-white text-4xl animated zoom-in">Welcome to<strong class="text-dark"> Healthy & Core</strong></h1>
                     <p class="text-white mb-4 animated zoom-in">HealtyCore adalah sebuah solusi perangkat lunak yang digunakan di  rumah sakit untuk mengotomatisasi dan menyederhanakan proses pendaftaran pasien.</p>
                     <a href="#explore" class="btn btn-light rounded-full py-3 px-5 animated zoom-in border border-yellow-500">Daftar Antrian</a>
                 </div>
