@@ -1,4 +1,4 @@
-<div class="w-full mx-auto bg-yellow-400 fixed top-0 z-10">
+<div class="w-full mx-auto bg fixed top-0 z-10">
     <div class="w-full flex items-center justify-between">
         <div class="flex items-center">
             <a class="flex items-center text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl ml-5"

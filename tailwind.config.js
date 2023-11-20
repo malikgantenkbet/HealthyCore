@@ -15,6 +15,9 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
         },
+        colors:{
+            'brown' : '#775949',
+        }
     },
 
     plugins: [forms],
