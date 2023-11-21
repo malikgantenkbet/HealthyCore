@@ -4,18 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<<<<<<< HEAD
     <title>HealthyCore | Home</title>
-=======
     <title>HealthyCore | {{ $title }}</title>
->>>>>>> 7c87065280542ce5ba4d711996b2566a556582f1
-
-    <!-- Fonts -->
+   <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.rawgit.com/mattbryson/TouchSwipe-Jquery-Plugin/v1.6.18/dist/jquery.touchSwipe.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
@@ -359,6 +357,24 @@
        <a href="/article/{{ $contents->find(3)->id }}" class="read-more-btn"> Read More</a>
     </div>
 
+    <div class="article">
+    <a href="/article/{{ $contents->find(4)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(4)->galery }}"
+              alt=""
+              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+      <br>
+      <h2 style="font-size: 23px; font-weight: bold;">{{ $contents->find(4)->judul }}</h2>
+      <br>
+      <p class="text-black">{{ Str::limit($contents->find(4)->isi, 100)}}</p>
+       <br>
+
+       <a href="/article/{{ $contents->find(4)->id }}" class="read-more-btn"> Read More</a>
+    </div>
+
+    
     
     <div class="slide-box">
       <div class="arrow" onclick="slideRight()">&#9655;</div>
