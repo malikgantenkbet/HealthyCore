@@ -1,10 +1,10 @@
-<div class="w-full mx-auto bg-stone-800 fixed top-0 z-10">
+<div class="w-full mx-auto bg-brown fixed top-0 z-10">
     <div class="w-full flex items-center justify-between">
         <div class="flex items-center">
             <a class="flex items-center text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl ml-5"
                 href="#">
-                <!-- <x-application-logo class="block h-8 pr-2 w-auto fill-current" /> -->
-                <span class="font-semibold text-lg md:text-xl">HealthyCore</span>
+                <x-application-logo class="block h-8 pr-2 w-auto fill-current" />
+                <span class="font-semibold text-lg md:text-xl"></span>
             </a>
         </div>
         <div class="flex items-center space-x-4 px-6">
@@ -49,3 +49,8 @@
         });
     });
 </script>
+<style>
+    .bg-brown{
+        background-color: #775949;
+    }
+</style>
