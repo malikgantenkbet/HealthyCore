@@ -1,0 +1,77 @@
+.post-meta ul li {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-transform: capitalize;
+    display: inline-block;
+    float: none;
+  }
+  
+  .content-main .post-meta a {
+    color: #a2a2a2;
+    margin-left: 5px;
+  }
+  .journal-block .journal-info .journal-txt {
+    padding: 25px 0px;
+    position: relative;
+  }
+  
+  .journal-block .journal-info .journal-txt h4 a {
+    display: block;
+    font-size: 19px;
+    line-height: 24px;
+    margin: 0 0 13px 0;
+    font-weight: 500;
+    color: #292929;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .journal-block .journal-info .journal-txt h4 a:hover {
+    color: #b8a07e;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .journal-block .journal-info .journal-txt p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .entry-comments-author {
+    margin-right: 10px;
+    font-size: 13px;
+    color: #292929;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+  }
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+.contact-info {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 350px;
+    margin-left: 15px;
+}
+
+.contact-info h1 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.whatsapp {
+    display: flex;
+    align-items: center;
+}
+.left-align {
+    text-align: left;
+}
