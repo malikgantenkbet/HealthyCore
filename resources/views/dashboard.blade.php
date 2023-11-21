@@ -331,7 +331,7 @@
             View All Articles
         </a>  
     </div>
-</
+</section>
 <!-- artikel-->
 
 <!-- about us-->
