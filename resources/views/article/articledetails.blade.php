@@ -100,7 +100,7 @@
 
     <article>
         
-        <img class="article-image" src="asset{{'public/$article->gallery'}}" alt="Gambar Artikel">
+        <img class="article-image" src="{{ asset('img/articelCorona.png') }}" alt="Gambar Artikel">
         <h1 class="article-title">{{ $article->judul }}</h1>
         <br>
         <p>{!! $article->isi !!}</p>

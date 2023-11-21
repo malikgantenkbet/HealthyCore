@@ -31,6 +31,9 @@
          display: table-cell;
          vertical-align: middle;
          }
+         .bg-brown{
+            background-color: #775949;
+    }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -46,11 +49,11 @@
             <a class="flex items-center text-white-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
             href="{{ route('welcome') }}">
                 <x-application-logo class="block h-8 pr-2 w-auto fill-current" />
-                <span class="text-yellow-400 font-semibold text-lg md:text-xl">HealthyCore</span>
+                <span class="text-white font-semibold text-lg md:text-xl"></span>
             </a>
             <div class="flex w-1/2 justify-end content-center">
                 <a href="{{ route('login') }}"
-                class="inline-block text-white no-underline bg-yellow-400 hover:bg-yellow-500 hover:text-white text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out rounded-full">
+                class="inline-block text-white no-underline bg-yellow-600 hover:bg-yellow-500 hover:text-white text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out rounded-full">
                     LOGIN <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 </a>
             </div>
@@ -63,7 +66,7 @@
             <div class="">
                 <h1 class="text-white text-4xl animated zoom-in">Welcome to<strong class="text-dark"> Healthy & Core</strong></h1><br>
                 <p class="text-white mb-4 animated zoom-in"><br>HealtyCore adalah sebuah solusi perangkat lunak yang <br>digunakan di  rumah sakit untuk mengotomatisasi dan menyederhanakan <br>proses pendaftaran pasien.</p><br><br>
-                <a href="#explore" class="btn btn-light rounded-full py-3 px-5 animated zoom-in border border-yellow-500">Daftar Antrian</a>
+                <a href="#explore" class="btn btn-light text-white rounded-full py-3 px-5 animated zoom-in border border-yellow-500">Daftar Antrian</a>
             </div>        
         </div>
     </div>

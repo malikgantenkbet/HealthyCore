@@ -99,106 +99,72 @@
             color: #C07F00;
         }
     </style>
-    <title>Purrfect Adopt | My Cat</title>
+    <title>HealthyCore | Form</title>
 </head>
 
 <body>
-    @include('components.header')
+@include('components.header');
 
-    <section class="bg-white py-8">
-        <div class="container mx-auto">
-            <br><div class="image-container">
-            <h1 class="center">My cat</h1>
-                <div class="image-row">
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/1.png') }}" alt="My Cat 1"/>
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 1</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/2.png') }}" alt="My Cat 2">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 2</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/3.png') }}" alt="My Cat 3">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 3</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/4.png') }}" alt="My Cat 4">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 4</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/5.png') }}" alt="My Cat 5">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 5</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-row">
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/6.png') }}" alt="My Cat 6">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 6</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/7.png') }}" alt="My Cat 7">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 7</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/8.png') }}" alt="My Cat 8">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 8</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/9.png') }}" alt="My Cat 9">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>My Cat 9</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-box">
-                        <img src="{{ asset('/images/MyCat/Tambah.png') }}" alt="More">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>View All</h3>
-                                <a href="#">Click more</a>
-                            </div>
-                        </div>
-                    </div>
+<!--body-->
+<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
+    Daftar Antrian
+</div>
+<div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">
+    Form untuk daftar antrian pasien rumah sakit.
+</div>
+
+<div class="container w-1/2 mx-auto px-4">
+    <form action="{{ route('contents.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div>
+                <label for="nama" class="mb-2 text-sm font-medium text-gray-900 sr-only">Nama</label>
+                <input type="text" id="nama" name="nama" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Nama" required>
+            </div>
+
+            <div>
+                <label for="alamat" class="mb-2 text-sm font-medium text-gray-900 sr-only">Alamat</label>
+                <input type="text" id="alamat" name="alamat" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Alamat" required>
+            </div>
+
+            <div>
+                <label for="jenis_kelamin" class="mb-2 text-sm font-medium text-gray-900 sr-only">Jenis Kelamin</label>
+                <div class="relative inline-block w-full text-gray-700">
+                    <select id="jenis_kelamin" name="jenis_kelamin" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500">
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="laki-laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
                 </div>
             </div>
-        </div>
-    </section>
 
-     @include('components.footer')
+            <div>
+                <label for="telepon" class="mb-2 text-sm font-medium text-gray-900 sr-only">Telepon</label>
+                <input type="text" id="telepon" name="telepon" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Telepon" required>
+            </div>
+
+            <div>
+                <label for="keluhan" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only">Keluhan</label>
+                <textarea id="keluhan" name="keluhan" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Keluhan" required rows="6"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">
+            Kirim
+        </button>
+    </form>
+
+    @if(session('success'))
+        @include('article.success-popup')
+    @endif
+</div>
+
+@include('components.footer')
 </body>
 
 </html>
