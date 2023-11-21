@@ -394,10 +394,10 @@
                     About Us
                 </h2>
                 <p class="mt-4 text-base text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu leo felis. Curabitur volutpat eros ut nulla bibendum varius. Cras elementum, elit in vehicula feugiat, ex orci vestibulum elit, non semper enim turpis ut purus. Sed sit amet justo id justo pharetra gravida. Fusce tincidunt, elit ac posuere auctor, ligula elit fermentum enim, id pulvinar ex urna at libero. Nulla facilisi. In hac habitasse platea dictumst.
+                HealthyCore adalah sebuah platform antrian daring khusus untuk pengguna rumah sakit yang tengah mengalami gejala sakit. Dengan antarmuka yang praktis dan mudah digunakan, web ini dirancang untuk memberikan pengalaman antrian yang efisien dan nyaman bagi para pasien. Melalui HealthyCore, pengguna dapat dengan cepat mendaftar ke layanan rumah sakit tanpa harus menghabiskan waktu berlama-lama di lokasi fisik
                 </p>
                 <p class="mt-4 text-base text-gray-600">
-                    Duis vel ultricies magna. Morbi fringilla odio ac bibendum rhoncus. Sed ut finibus eros. In hac habitasse platea dictumst. Sed vitae neque augue. Nullam nec gravida mauris. Praesent et luctus libero. Integer in bibendum sem. Nulla facilisi.
+                HealthyCore tidak hanya membantu mempercepat proses antrian, tetapi juga meningkatkan aksesibilitas layanan kesehatan, menjadikan pengalaman pendaftaran di rumah sakit lebih mudah dan efektif bagi semua pihak yang terlibat.
                 </p>
             </div>
 
