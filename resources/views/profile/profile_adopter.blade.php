@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Purrfect Adopt</title>
+    <title>Healthy Core</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -51,7 +51,7 @@
         </div>
     </div>
     <!-- p iki form -->
-    <div class="bg-yellow-300 p-3 m-5 rounded-lg hover:shadow">
+    <div class="bg-brown p-3 m-5 rounded-lg hover:shadow">
     @php
         $editing = false; // Menambahkan inisialisasi variabel $editing
     @endphp
@@ -77,11 +77,12 @@
     @else
         <!-- view email dan nomor telepon -->
         <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email:</label>
+            <label class="block text-white text-sm font-bold mb-2" for="email">Email:</label>
             <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="email" type="text"
                 value="{{ $user->email ?? '' }}" readonly>
             <br>
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="kontak">Nomor Telepon:</label>
+            <br>
+            <label class="block text-white text-sm font-bold mb-2" for="kontak">Nomor Telepon:</label>
             <input class="border border-gray-400 rounded-md py-2 px-3 w-full" id="kontak" type="text"
                 value="{{ $user->kontak ?? '' }}" readonly>
         </div>
@@ -97,7 +98,7 @@
 <!-- Container for demo purpose -->
 <div class="container my-24 mx-auto md:px-6">
   <!-- Section: Design Block -->
-  <section class="mb-32 text-center md:text-left">
+  <!-- <section class="mb-32 text-center md:text-left">
     <div class="bg-yellow-300 block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
         <div class="bg-yellow-300 flex flex-wrap items-center">
             <div class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
@@ -122,7 +123,7 @@
             </div>
         </div>
     </div>
-  </section>
+  </section> -->
   <!-- Section: Design Block -->
 </div>
 <!-- Container for demo purpose -->
@@ -130,7 +131,7 @@
 
 <!-- section 3 -->
 
-    <section class="container my-24 mx-auto md:px-6">
+    <!-- <section class="container my-24 mx-auto md:px-6">
     <a class="container my-24 mx-auto md:px-6"href="">
             <br><button type="" class="border border-yellow-300 hover:bg-yellow-300 text-yellow-300 hover:text-white font-bold py-2 px-4 rounded w-full">Discussion</button>
         </a>
@@ -143,7 +144,7 @@
         <a class="container my-24 mx-auto md:px-6"href="">
             <br><button type="" class="border border-yellow-300 hover:bg-yellow-300 text-yellow-300 hover:text-white font-bold py-2 px-4 rounded w-full">Sign Out</button>
         </a>
-    </section>
+    </section> -->
   <!-- Section 3 end -->
 
 <!-- custom js -->
@@ -178,6 +179,11 @@
         parentDiv.appendChild(editButton);
     }
 </script>
+<style>
+    .bg-brown{
+        background-color: #775949;
+    }
+</style>
 
 
 

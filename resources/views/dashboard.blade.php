@@ -378,11 +378,10 @@
                     About Us
                 </h2>
                 <p class="mt-4 text-base text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu leo felis. Curabitur volutpat eros ut nulla bibendum varius. Cras elementum, elit in vehicula feugiat, ex orci vestibulum elit, non semper enim turpis ut purus. Sed sit amet justo id justo pharetra gravida. Fusce tincidunt, elit ac posuere auctor, ligula elit fermentum enim, id pulvinar ex urna at libero. Nulla facilisi. In hac habitasse platea dictumst.
+                <strong>HealtyCore</strong> adalah sebuah solusi perangkat lunak yang digunakan di  rumah sakit untuk mengotomatisasi dan menyederhanakan proses pendaftaran pasien.
                 </p>
                 <p class="mt-4 text-base text-gray-600">
-                    Duis vel ultricies magna. Morbi fringilla odio ac bibendum rhoncus. Sed ut finibus eros. In hac habitasse platea dictumst. Sed vitae neque augue. Nullam nec gravida mauris. Praesent et luctus libero. Integer in bibendum sem. Nulla facilisi.
-                </p>
+                Dibawah naungan <strong>PT Kesehatan Bersama</strong>, mengembangkan Teknologi Informasi di bidang kesehatan guna membantu tenaga kesehatan dalam manajemen, administrasi, dan statistik di rumah sakit mereka.
             </div>
 
             <!-- Left Section (1/3 of the page) -->

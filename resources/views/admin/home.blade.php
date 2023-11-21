@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Purrfect Adopt</title>
+  <title>Healthy Core</title>
 
   <!--Icon Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,7 +27,7 @@
             <!--Grid starts here-->
             <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
                 <div>
-                <div  class="text-sm text-gray-400 ">Data Kucing</div>
+                <div  class="text-sm text-gray-400 ">Data Pasien</div>
                     <div class="flex items-center pt-1">
                         <div id="hitungkucing" class="text-3xl font-medium text-gray-600 "></div>
                     </div>
@@ -43,7 +43,7 @@
 
             <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
                 <div>
-                <div class="text-sm text-gray-400 ">Data User</div>
+                <div class="text-sm text-gray-400 ">Data Antrian</div>
                 <div class="flex items-center pt-1">
                     <div id="hitunguser" class="text-3xl font-medium text-gray-600 "></div>
                 </div>

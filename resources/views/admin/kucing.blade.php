@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purrfect Adopt</title>
+    <title>Healthy Core</title>
 
     <!-- icon pack -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,7 +37,7 @@
       <!-- SDSS -->
     <div class="container my-16">
 
-         <div style="margin-left: 90px; margin-top: 25px" class="flex">
+         <!-- <div style="margin-left: 90px; margin-top: 25px" class="flex">
           <h4 class="font-bold p-1"><b>Data kucing yang terdaftar</b></p>
         </div>
 
@@ -61,7 +61,7 @@
 
                 </tbody>
             </table>
-        </div>
+        </div> -->
     </div>
 
     @include('components.footer')
