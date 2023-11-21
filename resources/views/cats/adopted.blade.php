@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Z16m7XoYlO5FJ1kgv9Fi4YRJbOwxnRTK8MZr4J0dd0DbOpJ1S4MKt6DA2h+I70az" crossorigin="anonymous">
+
+    <!-- Bootstrap JS (optional, for modal functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-cw9bxcHTq0H00SfHbBjB8PQZJSqB1S9lFdoUDptXhZB0qj5KHvRZo1JPeIwGZlT" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -168,8 +173,15 @@
         @include('article.success-popup')
     @endif
 </div>
-<div class="modal-body">
-  Nomor Antrian Anda: <span id="nomorAntrian"></span>
+<!-- Modal -->
+<div class="modal fade" id="nomorAntrianModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                Nomor Antrian Anda: <span id="nomorAntrian"></span>
+            </div>
+        </div>
+    </div>
 </div>
 
 @include('components.footer')
