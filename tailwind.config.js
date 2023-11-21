@@ -15,9 +15,13 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
         },
-        colors:{
-            'brown' : '#775949',
-        }
+        // colors: {
+        //     transparent: 'transparent',
+        //     current: 'currentColor',
+        //     'white': '#ffffff',
+        //     'brown':'#775949'
+        //     'yellow' : '#775944'
+        // }
     },
 
     plugins: [forms],

@@ -3,8 +3,8 @@
         <div class="flex items-center">
             <a class="flex items-center text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl ml-5"
                 href="#">
-                <x-application-logo class="block h-8 pr-2 w-auto fill-current" />
-                <span class="font-semibold text-lg md:text-xl">PurrfectAdopt</span>
+                <!-- <x-application-logo class="block h-8 pr-2 w-auto fill-current" /> -->
+                <span class="font-semibold text-lg md:text-xl">HealthyCore</span>
             </a>
         </div>
         <div class="flex items-center space-x-4 px-6">
@@ -14,11 +14,11 @@
             </a>
             <a href="/article"
                 class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
-                Article
+                Artikel
             </a>
             <a href="/adopted"
                 class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
-                My Cat
+                Antrian
             </a>
             <div class="relative ml-auto mx-5">
                 <div class="relative inline-block">
@@ -49,3 +49,8 @@
         });
     });
 </script>
+<style>
+    .bg-brown{
+        background-color: #775949;
+    }
+</style>

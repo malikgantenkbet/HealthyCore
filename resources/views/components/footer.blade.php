@@ -1,35 +1,35 @@
-<div class="px-4 pt-12 pb-8 mx-auto text-white bg-yellow-500">
+<div class="px-4 pt-12 pb-8 mx-auto text-white bg-brown">
     <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4 px-10">
       <div class="sm:col-span-2">
           <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
-              <x-application-logo class="block h-8 pr-2 w-auto fill-current" />
-              <span class="font-semibold text-white md:text-xl">PurrfectAdopt</span>
+              <!-- <x-application-logo class="block h-8 pr-2 w-auto fill-current" /> -->
+              <span class="font-semibold text-white md:text-xl">HealthyCore</span>
           </a>
           <div class="mt-6 lg:max-w-sm">
               <p class="text-sm text-white">
-                  Purrfect Adopt is a website dedicated to connecting people who want to adopt cats with cats in need of new homes. The website provides an easy-to-use and informative platform for potential cat owners to find cats that match their preferences and provide them with loving homes.
+              HealtyCore adalah sebuah solusi perangkat lunak yang digunakan di  rumah sakit untuk mengotomatisasi dan menyederhanakan proses pendaftaran pasien.
               </p>
           </div>
       </div>
       
       <div class="space-y-2 text-sm">
-          <p class="text-base font-bold tracking-wide text-white">Our Office</p>
+          <p class="text-base font-bold tracking-wide text-white">Klinik Kami</p>
           <div class="flex items-center">
               <i class="fas fa-map-marker-alt mr-3"></i> 
               <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                  Jl. Veteran, Ketawanggede, Lowokwaru, Malang City, East Java 65145, ID
+                  Jl. MT Haryono gg.02 #513, Malang, Jawa Timur, 65142
               </a>
           </div>
           <div class="flex items-center">
               <i class="fas fa-phone mr-3"></i>
               <a href="tel:812-3456-7890" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                  +6281234567890
+                  +62 895 6136 99 600
               </a>
           </div>
           <div class="flex items-center">
               <i class="fas fa-envelope mr-3"></i>
               <a href="mailto:purrfectadopt@gmaail.com" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                  purrfectadopt@gmail.com
+                  official@healthycore.com
               </a>
           </div>
       </div>
@@ -56,7 +56,7 @@
     </div>
     <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row px-10">
       <p class="text-sm text-white">
-          © Copyright 2023 PurrfectAdopt Inc. All rights reserved.
+          © Copyright 2023 PT Kesehatan Bersama HealthyCore. All rights reserved.
       </p>
       <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
           <li>
@@ -71,3 +71,9 @@
       </ul>
     </div>
   </div>
+
+  <style>
+    .bg-brown{
+        background-color: #775949;
+    }
+</style>
