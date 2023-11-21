@@ -10,6 +10,8 @@
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/mattbryson/TouchSwipe-Jquery-Plugin/v1.6.18/dist/jquery.touchSwipe.min.js"></script>
 
     <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
@@ -35,6 +37,75 @@
          display: table-cell;
          vertical-align: middle;
          }
+
+        h2 {
+          font-size: 42px; 
+            font-weight: bold; 
+        }
+
+         body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .article-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    .article {
+      width: 30%;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .article:hover {
+      transform: scale(1.05);
+    }
+
+    .article img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .slide-box {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .arrow {
+      font-size: 24px;
+      cursor: pointer;
+      margin: auto 10px;
+    }
+
+    .read-more-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .read-more-btn:hover {
+      background-color: #2980b9;
+    }
+    
 
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -223,115 +294,74 @@
 <div class="max-w-screen-xl px-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
     <header class="text-center mb-8">
         <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-            Articles
+            Our Articles
         </h2>
+        <h3>Artikel ini isi konten terkait wabah virus berbahaya dan harus dihindari</h3>
     </header>
 
-    <section class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <!-- Left Article -->
-        <article class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-            <a href="/article/{{ $contents->find(1)->id }}" class="relative block group">
-                <img
-                    src="{{ $contents->find(1)->galery }}"
-                    alt=""
-                    class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-                />
-            </a>
-
-            <a href="/article/{{ $contents->find(1)->id }}">
-                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
-                    {{ $contents->find(1)->judul }}
-                </h3>
-            </a>
-
-            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                {{ Str::limit($contents->find(1)->isi, 200) }}
-            </p>
-
-            <div class="sm:flex sm:items-end sm:justify-end">
-                <a href="/article/{{ $contents->find(1)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                    > Read more
-
-                    <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                        &rarr;
-                    </span>
-                </a>
-            </div>
-        </article>
-
-        <!-- Right Article -->
-        <article class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-            <a href="/article/{{ $contents->find(2)->id }}" class="relative block group">
-                <img
-                    src="{{ $contents->find(2)->galery }}"
-                    alt=""
-                    class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-                />
-            </a>
-
-            <a href="/article/{{ $contents->find(2)->id }}">
-                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
-                    {{ $contents->find(2)->judul }}
-                </h3>
-            </a>
-
-            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                {{ Str::limit($contents->find(2)->isi, 200) }}
-            </p>
-
-            <div class="sm:flex sm:items-end sm:justify-end">
-                <a href="/article/{{ $contents->find(2)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                    > Read more
-
-                    <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                        &rarr;
-                    </span>
-                </a>
-            </div>
-        </article>
-    </section>
-
-    <!-- Slide Article -->
-    <div class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
-        @foreach ($contents->slice(3) as $content)
-            <article class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-                <a href="/article/{{ $content->id }}" class="relative block group">
-                    <img
-                        src="{{ $content->galery }}"
-                        alt=""
-                        class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-                    />
-                </a>
-
-                <a href="/article/{{ $content->id }}">
-                    <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
-                        {{ $content->judul }}
-                    </h3>
-                </a>
-
-                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-                    {{ Str::limit($content->isi, 200) }}
-                </p>
-
-                <div class="sm:flex sm:items-end sm:justify-end">
-                    <a href="/article/{{ $content->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                        > Read more
-
-                        <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                            &rarr;
-                        </span>
-                    </a>
-                </div>
-            </article>
-        @endforeach
+    <div class="article-container">
+    <div class="slide-box">
+      <div class="arrow" onclick="slideLeft()">&#9665;</div>
     </div>
 
-    <div class="sm:flex sm:items-end sm:justify-center py-6">
-        <a href="/article" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
-            View All Articles
-        </a>  
+    <div class="article">
+    <a href="/article/{{ $contents->find(1)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(1)->galery }}"
+              alt=""
+              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+      <br>
+      <h2 style="font-size: 23px; font-weight: bold;">{{ $contents->find(1)->judul }}</h2>
+      <br>
+      <p class="text-black">{{ Str::limit($contents->find(1)->isi, 100)}}</p>
+       <br>
+
+       <a href="/article/{{ $contents->find(3)->id }}" class="read-more-btn"> Read More</a>
     </div>
-</section>
+
+    <div class="article">
+    <a href="/article/{{ $contents->find(2)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(2)->galery }}"
+              alt=""
+              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+      <br>
+      <h2 style="font-size: 23px; font-weight: bold;">{{ $contents->find(2)->judul }}</h2>
+      <br>
+      <p class="text-black">{{ Str::limit($contents->find(2)->isi, 100)}}</p>
+       <br>
+
+       <a href="/article/{{ $contents->find(3)->id }}" class="read-more-btn"> Read More</a>
+    </div>
+
+    <div class="article">
+    <a href="/article/{{ $contents->find(3)->id }}" class="relative block group">
+            <img
+              src="{{ $contents->find(3)->galery }}"
+              alt=""
+              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+            />
+          </a>
+      <br>
+      <h2 style="font-size: 23px; font-weight: bold;">{{ $contents->find(3)->judul }}</h2>
+      <br>
+      <p class="text-black">{{ Str::limit($contents->find(3)->isi, 100)}}</p>
+       <br>
+
+       <a href="/article/{{ $contents->find(3)->id }}" class="read-more-btn"> Read More</a>
+    </div>
+
+    
+    <div class="slide-box">
+      <div class="arrow" onclick="slideRight()">&#9655;</div>
+    </div>
+  </div>
+
+  </section>
 <!-- artikel-->
 
 <!-- about us-->
@@ -390,6 +420,9 @@
       },
     })
   })
+
+  
+  
 </script>
 <!--slider cards-->
 
