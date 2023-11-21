@@ -298,7 +298,7 @@
         <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
             Our Articles
         </h2>
-        <h3>Artikel ini isi konten terkait wabah virus berbahaya dan harus dihindari</h3>
+        <h3 class="text-black" :>Artikel ini isi konten terkait wabah virus berbahaya dan harus dihindari</h3>
     </header>
 
     <div class="article-container">

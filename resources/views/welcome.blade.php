@@ -53,8 +53,8 @@
             </a>
             <div class="flex w-1/2 justify-end content-center">
                 <a href="{{ route('login') }}"
-                class="inline-block text-white no-underline bg-yellow-600 hover:bg-yellow-500 hover:text-white text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out rounded-full">
-                    LOGIN <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                class="btn btn-light text-white rounded-full py-3 px-5 animated zoom-in border border-yellow-500">
+                    Masuk <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 </a>
             </div>
         </div>
