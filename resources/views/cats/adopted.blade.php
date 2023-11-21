@@ -106,38 +106,65 @@
 @include('components.header');
 
 <!--body-->
-<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">Daftar Antrian</div>
+<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
+    Daftar Antrian
 </div>
-<div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">Form untuk daftar antrian pasien rumah sakit.</div>
+<div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">
+    Form untuk daftar antrian pasien rumah sakit.
 </div>
 
 <div class="container w-1/2 mx-auto px-4">
     <form action="{{ route('contents.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Nama</label>
-        <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        placeholder="Nama" required>
-        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Alamat</label>
-        <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        placeholder="Alamat" required>
-        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Jenis Kelamin</label>
-        <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        placeholder="Jenis Kelamin" required>
-        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Telepon</label>
-        <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        placeholder="Telepon" required>
-        <label for="post-content" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only">Keluhan</label>
-        <textarea id="post-content" name="isi" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        placeholder="Keluhan" required rows="6"></textarea>
-        <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">Kirim</button>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div>
+                <label for="nama" class="mb-2 text-sm font-medium text-gray-900 sr-only">Nama</label>
+                <input type="text" id="nama" name="nama" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Nama" required>
+            </div>
+
+            <div>
+                <label for="alamat" class="mb-2 text-sm font-medium text-gray-900 sr-only">Alamat</label>
+                <input type="text" id="alamat" name="alamat" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Alamat" required>
+            </div>
+
+            <div>
+                <label for="jenis_kelamin" class="mb-2 text-sm font-medium text-gray-900 sr-only">Jenis Kelamin</label>
+                <div class="relative inline-block w-full text-gray-700">
+                    <select id="jenis_kelamin" name="jenis_kelamin" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500">
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="laki-laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="telepon" class="mb-2 text-sm font-medium text-gray-900 sr-only">Telepon</label>
+                <input type="text" id="telepon" name="telepon" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Telepon" required>
+            </div>
+
+            <div>
+                <label for="keluhan" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only">Keluhan</label>
+                <textarea id="keluhan" name="keluhan" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Keluhan" required rows="6"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">
+            Kirim
+        </button>
     </form>
+
     @if(session('success'))
-    @include('article.success-popup')
+        @include('article.success-popup')
     @endif
 </div>
- 
 
-     @include('components.footer')
+@include('components.footer')
 </body>
 
 </html>
