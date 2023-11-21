@@ -20,6 +20,21 @@
             font-family: 'Poppins', sans-serif;
             background-color: #FFF7D4;
         }
+        .bg-utama{
+         background-image: url('/img/background.jpg');
+         background-size: auto;
+         background-position: center;
+         text-align: center;
+         height: 100%;
+         width: 100%;
+         display: table;
+         vertical-align: middle;
+         }
+         h1,p{color: white;}
+         .konten-ditengah {
+         display: table-cell;
+         vertical-align: middle;
+         }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -27,7 +42,21 @@
     @include('components.header')
 
 <!--body-->
-<div class="mt-16 w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
+<section>
+<div class="bg-utama relative w-full h-screen flex flex-col items-center justify-center mx-auto">
+    <!--Main-->
+    <div class="konten-ditengah text-center">
+        <div>
+            <h1 class="text-white text-4xl animated zoom-in">Welcome to <strong class="text-dark">Healthy & Core</strong></h1><br>
+            <p class="text-white mb-4 animated zoom-in">HealthyCore adalah sebuah solusi perangkat lunak yang digunakan <br>di rumah sakit untuk mengotomatisasi dan menyederhanakan proses <br>pendaftaran pasien.</p><br>
+            <a href="#explore" class="btn btn-light rounded-full py-3 px-5 animated zoom-in border border-yellow-500">Daftar Antrian</a>
+        </div>        
+    </div>
+</div>
+</section>
+
+
+<!-- <div class="mt-16 w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
     New way of finding your dream cat</div>
 </div>
 <div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">
@@ -46,10 +75,10 @@
     </div>
   </form>
 </div>
-<br> <br>
+<br> <br> -->
 
 <!--card-->
-<section>
+<!-- <section>
   <div
     class="mx-auto max-w-[1340px] px-4 py-10 sm:px-6 sm:py-20 lg:me-0 lg:pe-0 lg:ps-8"
   >
@@ -140,11 +169,11 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- card-->
 
 <!-- choose us-->
- <div id="features" class="relative w-full px-0 py-10 md:py-16 lg:py-24 xl:py-20 xl:px-0">
+ <!-- <div id="features" class="relative w-full px-0 py-10 md:py-16 lg:py-24 xl:py-20 xl:px-0">
         <div class="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
             <h2
                 class="max-w-2xl px-5 mt-0 text-3xl font-black leading-tight text-center text-gray-900 sm:mt-0 sm:px-0 sm:text-6xl">
@@ -185,7 +214,7 @@
                 </div>
             </div>  
         </div>
-    </div>
+    </div> -->
 <!-- choose us-->
 
 <!-- artikel-->
