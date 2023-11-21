@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Purrfect Adopt | {{ $title }}</title>
+    <title>HealthyCore | Article</title>
      <!-- swiper -->
      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -27,29 +27,35 @@
     @include('components.header');
 
 <!--body-->
-<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">Welcome to Article</div>
+<!-- <div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">Daftar Antrian</div>
 </div>
-<div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">Find Your Feline Friend: Experience the Joy of Cat Adoption</div>
+<div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">Form untuk daftar antrian pasien rumah sakit.</div>
 </div>
 
 <div class="container w-1/2 mx-auto px-4">
     <form action="{{ route('contents.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Post Title</label>
+        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Nama</label>
         <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        placeholder="Enter your post title" required>
-        <label for="post-content" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only">Post Content</label>
+        placeholder="Nama" required>
+        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Alamat</label>
+        <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        placeholder="Alamat" required>
+        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Jenis Kelamin</label>
+        <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        placeholder="Jenis Kelamin" required>
+        <label for="post-title" class="mb-2 text-sm font-medium text-gray-900 sr-only">Telepon</label>
+        <input type="text" id="post-title" name="judul" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+        placeholder="Telepon" required>
+        <label for="post-content" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only">Keluhan</label>
         <textarea id="post-content" name="isi" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        placeholder="Write your post content" required rows="6"></textarea>
-        <label for="post-image" class="mt-4 mb-2 text-sm font-medium text-gray-900 sr-only">Upload Image</label>
-        <input type="file" id="post-image" name="galery" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
-        accept="image/*" required>
-        <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">Create Post</button>
+        placeholder="Keluhan" required rows="6"></textarea>
+        <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">Kirim</button>
     </form>
     @if(session('success'))
     @include('article.success-popup')
     @endif
-</div>
+</div> -->
 <br> <br>
 
 <!--top article-->
