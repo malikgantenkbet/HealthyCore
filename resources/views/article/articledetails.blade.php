@@ -100,41 +100,14 @@
 
     <article>
         
-        <img class="article-image" src="" alt="Gambar Artikel">
-        <h1 class="article-title">Corona: Penyakit Berbahaya yang Mengejutkan Dunia</h1>
+        <img class="article-image" src="{{ asset('img/articelCorona.png') }}" alt="Gambar Artikel">
+        <h1 class="article-title">{{ $article->judul }}</h1>
         <br>
-        <p>
-        Pada akhir tahun 2019, dunia dikejutkan oleh munculnya penyakit misterius yang kemudian dikenal sebagai COVID-19 atau lebih umum dikenal dengan istilah "corona." Penyakit ini bukan hanya menjadi ancaman kesehatan global, tetapi juga memicu transformasi dalam paradigma perawatan kesehatan dan kesadaran masyarakat terhadap kesehatan.
-
-1. Perkembangan Gejala dan Penularan
-
-Corona, yang disebabkan oleh virus SARS-CoV-2, memiliki gejala mulai dari ringan hingga parah. Dari demam yang mendalam hingga gangguan pernapasan serius, penyakit ini telah menunjukkan berbagai manifestasi yang membuatnya sulit untuk didiagnosis secara cepat. Penularannya yang sangat mudah dan cepat menyebabkan lonjakan kasus di seluruh dunia, memicu kekhawatiran global dan mendesak perluasan upaya pencegahan.
-
-2. Tantangan dalam Penanganan
-
-Penanganan corona membawa tantangan besar bagi sistem kesehatan di seluruh dunia. Keterbatasan peralatan medis, pengetahuan yang terus berkembang tentang virus, dan adanya varian baru menambah kompleksitas upaya penanganan. Kecepatan penyebaran yang tinggi dan dampaknya yang merata di berbagai lapisan masyarakat menunjukkan perlunya kerjasama global dalam penanganan pandemi ini.
-
-3. Vaksinasi sebagai Harapan
-
-Meskipun menghadapi tantangan, upaya untuk mengatasi corona telah memunculkan harapan baru melalui pengembangan dan distribusi vaksin. Vaksin COVID-19 menjadi tonggak penting dalam memerangi penyakit ini dan membangun kekebalan kelompok yang luas. Namun, pertanyaan etika, aksesibilitas global, dan perubahan virus terus menjadi aspek kritis dalam perjalanan vaksinasi.
-
-4. Transformasi Sosial dan Perubahan Paradigma
-
-Corona tidak hanya merubah cara kita melihat kesehatan fisik, tetapi juga memberikan dampak besar terhadap aspek sosial dan psikologis masyarakat. Kerja jarak jauh, pembatasan sosial, dan perubahan perilaku harian adalah sebagian dari adaptasi yang diperlukan untuk bertahan dari ancaman penyakit ini.
-
-Kesimpulan
-
-Dengan memahami kompleksitas corona, kita dapat lebih siap menghadapi tantangan masa depan. Sinergi antara inovasi medis, dukungan masyarakat, dan kebijakan global menjadi kunci untuk mengatasi penyakit berbahaya ini dan membangun fondasi yang lebih kokoh untuk perawatan kesehatan di masa mendatang.
-        </p>
+        <p>{!! $article->isi !!}</p>
 
         <!-- Tambahkan konten artikel sesuai kebutuhan -->
 
-        <div class="author-info">
-            <div>
-                <p class="author-name">Nama Penulis</p>
-                <p class="date">Tanggal Publikasi: -</p>
-            </div>
-        </div>
+        
 
         <div class="social-icons">
             <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
