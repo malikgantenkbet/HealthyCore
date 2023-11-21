@@ -35,6 +35,9 @@
          display: table-cell;
          vertical-align: middle;
          }
+         .bg-brown{
+        background-color: #775949;
+    }
 
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -50,7 +53,7 @@
         <div>
             <h1 class="text-white text-4xl animated zoom-in">Welcome to <strong class="text-dark">Healthy & Core</strong></h1><br>
             <p class="text-white mb-4 animated zoom-in">HealthyCore adalah sebuah solusi perangkat lunak yang digunakan <br>di rumah sakit untuk mengotomatisasi dan menyederhanakan proses <br>pendaftaran pasien.</p><br>
-            <a href="#explore" class="btn btn-light rounded-full py-3 px-5 animated zoom-in border border-yellow-500">Daftar Antrian</a>
+            <a href="#explore" class="btn btn-light text-white rounded-full py-3 px-5 animated zoom-in border border-yellow-500">Daftar Antrian</a>
         </div>        
     </div>
 </div>
@@ -249,7 +252,7 @@
             </p>
 
             <div class="sm:flex sm:items-end sm:justify-end">
-                <a href="/article/{{ $contents->find(1)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                <a href="/article/{{ $contents->find(1)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-600 px-4 pb-2"
                     > Read more
 
                     <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
@@ -280,7 +283,7 @@
             </p>
 
             <div class="sm:flex sm:items-end sm:justify-end">
-                <a href="/article/{{ $contents->find(2)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                <a href="/article/{{ $contents->find(2)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-600 px-4 pb-2"
                     > Read more
 
                     <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
@@ -314,7 +317,7 @@
                 </p>
 
                 <div class="sm:flex sm:items-end sm:justify-end">
-                    <a href="/article/{{ $content->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                    <a href="/article/{{ $content->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-600 px-4 pb-2"
                         > Read more
 
                         <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
@@ -327,7 +330,7 @@
     </div>
 
     <div class="sm:flex sm:items-end sm:justify-center py-6">
-        <a href="/article" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
+        <a href="/article" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-brown rounded-lg hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300">
             View All Articles
         </a>  
     </div>
