@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainDashboardController;
 use App\Http\Controllers\ContentController;
 use App\Http\Controllers\Admin\artikelAdminController;
+use App\Http\Controllers\Admin\DashboardController;
+
 
 /*
 |--------------------------------------------------------------------------

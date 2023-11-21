@@ -48,8 +48,8 @@
         <div class="w-full flex items-center justify-between">
             <a class="flex items-center text-white-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
             href="{{ route('welcome') }}">
-                <!-- <x-application-logo class="block h-8 pr-2 w-auto fill-current" /> -->
-                <span class="text-white font-semibold text-lg md:text-xl">HealthyCore</span>
+                <x-application-logo class="block h-8 pr-2 w-auto fill-current" />
+                <span class="text-white font-semibold text-lg md:text-xl"></span>
             </a>
             <div class="flex w-1/2 justify-end content-center">
                 <a href="{{ route('login') }}"
