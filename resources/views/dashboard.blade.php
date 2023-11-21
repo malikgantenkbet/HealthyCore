@@ -35,6 +35,7 @@
          display: table-cell;
          vertical-align: middle;
          }
+
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -219,117 +220,149 @@
 
 <!-- artikel-->
 <section>
-  <div class="max-w-screen-xl px-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
-    <header class="text-center">
-      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-       Read Articles
-      </h2>
+<div class="max-w-screen-xl px-4 mx-auto sm:px-6 sm:py-12 lg:px-8">
+    <header class="text-center mb-8">
+        <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+            Articles
+        </h2>
     </header>
 
-    <ul class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
-        <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-          <a href="/article/{{ $contents->find(1)->id }}" class="relative block group">
-            <img
-              src="{{ $contents->find(1)->galery }}"
-              alt=""
-              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-            />
-          </a>
+    <section class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <!-- Left Article -->
+        <article class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+            <a href="/article/{{ $contents->find(1)->id }}" class="relative block group">
+                <img
+                    src="{{ $contents->find(1)->galery }}"
+                    alt=""
+                    class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+                />
+            </a>
 
-          <a href="/article/{{ $contents->find(1)->id }}">
-                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+            <a href="/article/{{ $contents->find(1)->id }}">
+                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
                     {{ $contents->find(1)->judul }}
-                  </h3>
-          </a>
+                </h3>
+            </a>
 
-          <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
-            {{ Str::limit($contents->find(1)->isi, 200) }}
-              </p>
+            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+                {{ Str::limit($contents->find(1)->isi, 200) }}
+            </p>
 
-          <div class="sm:flex sm:items-end sm:justify-end">
-              <a href="/article/{{ $contents->find(1)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                  > Read more
+            <div class="sm:flex sm:items-end sm:justify-end">
+                <a href="/article/{{ $contents->find(1)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                    > Read more
 
-                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                      &rarr;
-                  </span>
-              </a>
-          </div>
-        </li>
+                    <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                        &rarr;
+                    </span>
+                </a>
+            </div>
+        </article>
 
-        <li class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
-          <a href="/article/{{ $contents->find(2)->id }}" class="relative block group">
-            <img
-              src="{{ $contents->find(2)->galery }}"
-              alt=""
-              class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
-            />
-          </a>
+        <!-- Right Article -->
+        <article class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+            <a href="/article/{{ $contents->find(2)->id }}" class="relative block group">
+                <img
+                    src="{{ $contents->find(2)->galery }}"
+                    alt=""
+                    class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+                />
+            </a>
 
-          <a href="/article/{{ $contents->find(2)->id }}">
-                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+            <a href="/article/{{ $contents->find(2)->id }}">
+                <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
                     {{ $contents->find(2)->judul }}
-                  </h3>
-              </a>
+                </h3>
+            </a>
 
-              <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
                 {{ Str::limit($contents->find(2)->isi, 200) }}
-              </p>
+            </p>
 
-              <div class="sm:flex sm:items-end sm:justify-end">
-              <a href="/article/{{ $contents->find(2)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                  > Read more
+            <div class="sm:flex sm:items-end sm:justify-end">
+                <a href="/article/{{ $contents->find(2)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                    > Read more
 
-                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                      &rarr;
-                  </span>
-              </a>
-              </div>
+                    <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                        &rarr;
+                    </span>
+                </a>
+            </div>
+        </article>
+    </section>
 
-        </li>
+    <!-- Slide Article -->
+    <div class="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+        @foreach ($contents->slice(3) as $content)
+            <article class="rounded-lg shadow transition hover:shadow-lg bg-white aspect-square">
+                <a href="/article/{{ $content->id }}" class="relative block group">
+                    <img
+                        src="{{ $content->galery }}"
+                        alt=""
+                        class="object-cover h-60 w-full transition duration-500 group-hover:opacity-90"
+                    />
+                </a>
 
-        <li class="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1 rounded-lg shadow transition 
-        hover:shadow-lg bg-white aspect-square">
-          <a href="/article/{{ $contents->find(3)->id }}" class="relative block group">
-            <img
-              src="{{ $contents->find(3)->galery }}"
-              alt=""
-              class="object-cover w-full transition duration-500 group-hover:opacity-90"
-            />
-          </a>
+                <a href="/article/{{ $content->id }}">
+                    <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
+                        {{ $content->judul }}
+                    </h3>
+                </a>
 
-          <a href="/article/{{ $contents->find(3)->id }}">
-                  <h3 class="mt-0.5 text-lg text-gray-900 px-4 pt-3">
-                    {{ $contents->find(3)->judul }}
-                  </h3>
-              </a>
+                <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 px-4">
+                    {{ Str::limit($content->isi, 200) }}
+                </p>
 
-              <p class="mt-2 text-sm/relaxed text-gray-500 px-4">
-                {{ Str::limit($contents->find(3)->isi, 1170) }}
-              </p>
+                <div class="sm:flex sm:items-end sm:justify-end">
+                    <a href="/article/{{ $content->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
+                        > Read more
 
-              <div class="sm:flex sm:items-end sm:justify-end">
-              <a href="/article/{{ $contents->find(3)->id }}" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-yellow-400 px-4 pb-2"
-                  > Read more
-
-                  <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
-                      &rarr;
-                  </span>
-              </a>
-              </div>
-
-        </li>
-    </ul>
-
-    <div class="sm:flex sm:items-end sm:justify-center py-6">
-      <a href="/article" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
-            View All Post
-        </a>  
+                        <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                            &rarr;
+                        </span>
+                    </a>
+                </div>
+            </article>
+        @endforeach
     </div>
 
-  </div>
-</section>
+    <div class="sm:flex sm:items-end sm:justify-center py-6">
+        <a href="/article" class="inline-flex px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300">
+            View All Articles
+        </a>  
+    </div>
+</
 <!-- artikel-->
+
+<!-- about us-->
+<div id="features" class="relative w-full px-0 py-10 md:py-16 lg:py-24 xl:py-20 xl:px-0 bg-brown-light">
+    <div class="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto">
+        <div class="flex flex-col lg:flex-row">
+            <!-- Right Section (2/3 of the page) -->
+            <div class="w-full lg:w-2/3 p-4">
+                <h2 class="max-w-2xl mt-0 text-3xl font-black leading-tight text-gray-900 sm:mt-0 sm:text-4xl">
+                    About Us
+                </h2>
+                <p class="mt-4 text-base text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu leo felis. Curabitur volutpat eros ut nulla bibendum varius. Cras elementum, elit in vehicula feugiat, ex orci vestibulum elit, non semper enim turpis ut purus. Sed sit amet justo id justo pharetra gravida. Fusce tincidunt, elit ac posuere auctor, ligula elit fermentum enim, id pulvinar ex urna at libero. Nulla facilisi. In hac habitasse platea dictumst.
+                </p>
+                <p class="mt-4 text-base text-gray-600">
+                    Duis vel ultricies magna. Morbi fringilla odio ac bibendum rhoncus. Sed ut finibus eros. In hac habitasse platea dictumst. Sed vitae neque augue. Nullam nec gravida mauris. Praesent et luctus libero. Integer in bibendum sem. Nulla facilisi.
+                </p>
+            </div>
+
+            <!-- Left Section (1/3 of the page) -->
+            <div class="w-full lg:w-1/3"><br>
+                <div class="w-full max-w-md mx-auto mb-4 lg:mb-0">
+                    <!-- Your image or content for the left section -->
+                    <!-- Example: -->
+                    <img src="/img/background.jpg" alt="About Us Image" class="w-full ">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- choose us-->
 
 
 <script>
